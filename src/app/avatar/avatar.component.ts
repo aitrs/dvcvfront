@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AvatarService } from '../avatar.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   	selector: 'app-avatar',
@@ -24,7 +25,7 @@ export class AvatarComponent implements OnInit {
 
   	ngOnInit(): void {
 		this.imgLoading = true;
-		this.service.getImage('api/static/imgs/avatar.jpg').subscribe((data) => {
+		this.service.getImage(environment.apiUrl+'/api/static/imgs/avatar.jpg').subscribe((data) => {
 			this.createImageFromBlob(data);
 			this.imgLoading = false;
 		}, (error) => {
