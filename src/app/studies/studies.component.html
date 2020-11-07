@@ -1,0 +1,10 @@
+<p class="section_head">__Studies__</p>
+<div class="studs_list_container" [@stLoadAnim]="{value: animState, params:{ maxHeight: ldMaxH}}">
+	<table>
+		<tr *ngFor="let st of studies" class="stud_tr">
+			<td class="studs_diploma">{{st.diploma}}</td>
+			<td class="studs_univ">{{st.univ}}</td>
+			<td class="studs_year">{{st.year}}</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,102 @@
+<div class="identity" *ngIf="identity !== undefined">
+	<div class="identity_civil">
+		<div [@loadAnim]="state"  class="identity_head" id="identityHead">
+			<strong class="identity_names">
+				{{identity.firstname}}<br />
+				{{identity.name}}
+			</strong>
+		</div>
+		<p class="section_head">__Info__</p>
+		<div class="button_container">
+			<button id="expandButton"  (click)="expandButtonClick()">{{expandButtonText}}</button>
+		</div>
+		<div id="contactContainer" [@expandContact]="expandContactState">
+			<table class="identity_contact" >
+				<tr>
+					<td>
+						<span class="identity_text">Age :</span>
+					</td>
+					<td>
+						<span class="identity_info">{{age}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="identity_text">Address :</span>
+					</td>
+					<td>
+						<span class="identity_info">{{identity.address}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="identity_text">Zip : </span>
+					</td>
+					<td>
+						<span class="identity_info">{{identity.zip}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="identity_text">City : </span>
+					</td>
+					<td>
+						<span class="identity_info">{{identity.town}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="identity_text">Country : </span>
+					</td>
+					<td>
+						<span class="identity_info">{{identity.country}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="identity_text">Email : </span>
+					</td>
+					<td>
+						<span class="identity_info">{{identity.email}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="identity_text">Phone : </span>
+					</td>
+					<td>
+						<span class="identity_info">{{identity.phone}}</span>
+					</td>
+				<tr>
+					<td>
+						<span class="identity_text">Nationality : </span>
+					</td>
+					<td>
+						<span class="identity_info">{{identity.nationality}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="identity_text">Website : </span>
+					</td>
+					<td>
+						<span class="identity_info">{{identity.website}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="identity_text">Driving Licences : </span>
+					</td>
+					<td>
+						<li *ngFor="let l of identity.drivelicences">
+							<span class="identity_list">{{l}}</span>
+						</li>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<p class="identity_presentation" [@presLoadAnim]="panim" >
+		<span class="identity_line" *ngFor="let line of identity.presentationLines">{{line}}<br /></span>
+	</p>
+</div>

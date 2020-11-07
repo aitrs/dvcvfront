@@ -1,0 +1,82 @@
+.WE_container {
+	margin-left: 75px;
+	overflow-y: hidden;
+	margin-top: -43px;
+	height: 35px;
+}
+
+.WE_short {
+	display: inline-block;
+	background-color: #0e2936;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	height: 25px;
+	width: 625px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 7px;
+	border: solid 1px;
+	border-color: #184257;
+	cursor: default;
+}
+
+.WE_short_selected {
+	display: inline-block;
+	background-color: #234759;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	height: 25px;
+	width: 625px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 7px;
+	border: solid 1px;
+	border-color: #184257;
+	cursor: default;
+}
+
+.WE_short:hover {
+	cursor: pointer;
+	background-color: #184257;
+}
+
+.WE_short_selected:hover {
+	cursor: pointer;
+	background-color: #184257;
+}
+
+table {
+	vertical-align: middle;
+}
+
+.WE_pending {
+	color: #00940c;
+	width: 50px;
+}
+
+.WE_company {
+	width: 330px;
+}
+
+.WE_dates {
+	width: 200px;
+	color: #2b82ad;
+
+}
+
+#expandWEButton {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	background-color: #143e52;
+	border-radius: 50%;
+	margin: auto;
+	color: inherit;
+	font-size: 17pt;
+	cursor: default;
+}
+
+#expandWEButton:hover {
+	cursor: pointer;
+}

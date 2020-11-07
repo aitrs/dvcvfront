@@ -1,0 +1,6 @@
+<div *ngIf="img !== undefined">
+	<img class="avatarimg" [src]="img" alt="avatar" *ngIf="!imgLoading; else noImageFound">
+	<ng-template #noImageFound>
+		<div class="avatarimg"></div>
+	</ng-template>
+</div>

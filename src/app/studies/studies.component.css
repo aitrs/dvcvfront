@@ -1,0 +1,37 @@
+.studs_list_container {
+	overflow-y: hidden;	
+}
+
+.stud_tr {
+	display: block;
+	background-color: #0e2936;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	height: 25px;
+	width: 625px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 7px;
+	border: solid 1px;
+	border-color: #184257;
+	cursor: default;
+	margin-left: 74px;
+}
+
+.stud_tr:hover {
+	background-color: #184257;
+}
+
+.studs_diploma {
+	color: #4287f5;
+	width: 200px;
+}
+
+.studs_univ {
+	color: #7a63e0;
+	width: 330px;
+}
+
+.studs_year {
+	color: #178740;
+}

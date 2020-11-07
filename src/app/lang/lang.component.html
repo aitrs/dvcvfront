@@ -1,0 +1,9 @@
+<p class="section_head">__Spoken_Languages__</p>
+<div class="langs_list_container" [@laLoadAnim]="{value: animState, params:{ maxHeight: ldMaxH}}">
+	<table>
+		<tr *ngFor="let lg of langs" class="lang_tr">
+			<td class="langs_label">{{lg.label}}</td>
+			<td class="langs_level">{{lg.level}}</td>
+		</tr>
+	</table>
+</div>

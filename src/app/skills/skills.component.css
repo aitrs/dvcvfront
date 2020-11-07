@@ -1,0 +1,43 @@
+.skill_container {
+	margin-left: 75px;
+	overflow-y: hidden;
+	margin-top: -40px;
+	margin-bottom: 30px;
+	height: 30px;
+}
+
+.skill_single {
+	display: inline-block;
+	background-color: #0e2936;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	height: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 7px;
+	border: solid 1px;
+	border-color: #184257;
+	border-radius: 10%;
+}
+
+.skill_single:hover {
+	background-color: #184257;
+}
+
+#expandSkillsButton {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	background-color: #143e52;
+	border-radius: 50%;
+	margin: auto;
+	color: inherit;
+	font-size: 17pt;
+	cursor: default;
+}
+
+#expandSkillsButton:hover {
+	cursor: pointer;
+}
+

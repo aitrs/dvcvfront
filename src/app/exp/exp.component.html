@@ -1,0 +1,31 @@
+<p class="section_head">__Work Experience__</p>
+<div class="button_container">
+	<button id="expandWEButton" (click)="expandButtonClick()">{{expandButtonText}}</button>
+</div>
+<div class="WE_container" [@weLoadAnim]="{value: animState , params:{ maxHeight: ldMaxH}}">
+	<table>
+		<tr *ngFor="let exp of exps" (click)="shortClick(exp.index)" [className]="exp.index === selId ? 'WE_short_selected' : 'WE_short'">
+			<td class="WE_dates">
+				<span class="WE_start">
+					<ng-container *ngIf="exp.pending; else fromBlock">
+						Since 
+					</ng-container>
+					<ng-template #fromBlock>
+						From 
+					</ng-template>
+					{{exp.start | date: 'MM/y'}}
+				</span>
+				<span *ngIf="!exp.pending" class="WE_end"> to {{exp.end | date: 'MM/y'}}</span>
+			</td>
+			<td class="WE_company">
+				{{exp.company}}
+			</td>
+			<td>
+				<span *ngIf="exp.pending" class="WE_pending">pending</span>
+			</td>
+		</tr>
+	</table>
+</div>
+<div tabindex="-1" class="detail_container" #detcont >
+	<app-expdetail [item]="detail"></app-expdetail>
+</div>

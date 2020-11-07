@@ -1,0 +1,12 @@
+.repos_container {
+	overflow-y: hidden;
+}
+
+p {
+	width: 647px;
+	color: #3070a1;
+	margin-left: 76px;
+	font-size: 8pt;
+	font-style: italic;
+	text-align: right;
+}

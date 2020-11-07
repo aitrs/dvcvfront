@@ -1,0 +1,65 @@
+.identity_head {
+	margin-top: -90px;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	background-color: #143e52;
+	border-radius: 50%;
+}
+
+#identityHead {
+	margin-left: 0px;
+	margin-bottom: 20px;
+	opacity: 0;
+}
+
+.identity_names {
+	height: 80px;
+	width: 80px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.identity_contact {
+	margin-top: 10px;
+	width: 400px;
+	margin-left: 75px;
+	background-color: #143e52;
+	border-radius: 10px;
+}
+
+.identity_text {
+	padding-left: 10px;
+}
+
+#contactContainer {
+	overflow-y: hidden;
+	margin-top: -51px;
+	margin-bottom: 60px;
+}
+
+#expandButton {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	background-color: #143e52;
+	border-radius: 50%;
+	margin: auto;
+	color: inherit;
+	font-size: 17pt;
+	cursor: default;
+}
+
+#expandButton:hover {
+	cursor: pointer;
+}
+
+.identity_presentation {
+	margin-left: 75px;
+	overflow: hidden;
+}
+
+.identity {
+	margin-bottom: 30px;
+}

@@ -1,0 +1,24 @@
+<div class="exp_detail" *ngIf="item">
+	<h3>{{item.company}}</h3>
+	<p class="exp_dates">
+		<ng-container *ngIf="item.pending; else fromBlock">
+			<span>Since {{item.start | date: 'MM/y'}} </span>
+		</ng-container>
+		<ng-template #fromBlock>
+			<span>From {{item.start | date: 'MM/y'}} </span>
+		</ng-template>
+
+		<span *ngIf="!item.pending"> to {{item.end | date: 'MM/y'}}</span>
+	</p>
+	<p class="exp_description">
+		<ng-container *ngFor="let line of item.descriptionLines">
+			{{line}} <br />
+		</ng-container>
+	</p>
+	<div class="exp_skills">
+		<ng-container *ngFor="let sk of item.skills">
+			<span *ngIf="sk.main; else nonMain" class="exp_mainskill">{{sk.label}}</span>
+			<ng-template #nonMain><span class="exp_secondaryskill">{{sk.label}}</span></ng-template>
+		</ng-container>
+	</div>
+</div>

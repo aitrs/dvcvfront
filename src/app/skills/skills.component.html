@@ -1,0 +1,7 @@
+<p class="section_head">__Skills__</p>
+<div class="button_container">
+	<button id="expandSkillsButton" (click)="expandButtonClick()">{{expandButtonText}}</button>
+</div>
+<div class="skill_container" [@skLoadAnim]="animState" >
+	<span class="skill_single" *ngFor="let sk of skills"> * {{sk.label}} ({{sk.duration}} y) </span>
+</div>

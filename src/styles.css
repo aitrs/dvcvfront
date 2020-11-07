@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	background-color: #01121a;
+	color: #daecf5;
+	font-family: sans;
+	font-size: 10pt;
+}
+
+.app_container {
+	width: 800px;
+	padding-top: 30px;
+	margin: auto;
+}
+
+.section_head {
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 500px;
+	color: #443dff;
+	text-align: center
+}
+
+.button_container {
+	width: 80px;
+	height: 41px;
+	margin-top: 20px;
+}
