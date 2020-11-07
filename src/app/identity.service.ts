@@ -4,7 +4,6 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { BaseService } from './baseservice';
 import { Identity } from './identity';
-import { environment } from '../environments/environment';
 
 @Injectable({
   	providedIn: 'root'
@@ -13,7 +12,7 @@ import { environment } from '../environments/environment';
 export class IdentityService extends BaseService<Identity> {
   	constructor(protected http: HttpClient) { 
 		super();
-		this.url = environment.apiUrl+'/api/';
+		this.url = "api/";
 	}
 	
 	getEmptyRes(): Identity {

@@ -5,7 +5,6 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { BaseService } from './baseservice';
 import { ExpShort } from './expshort';
 import { ExpDetail } from './expdetail';
-import { environment } from '../environments/environment';
 
 @Injectable({
   	providedIn: 'root'
@@ -14,7 +13,7 @@ export class ExpService extends BaseService<ExpShort[]> {
 
   	constructor(protected http: HttpClient) { 
 		super();
-		this.url = environment.apiUrl+'/api/short';
+		this.url = 'api/short';
 	}
 
 	getEmptyRes(): ExpShort[] {
@@ -35,7 +34,7 @@ export class ExpService extends BaseService<ExpShort[]> {
 	}
 
 	getDetail(id: number) : Observable<ExpDetail>  {
-		let detailUrl = environment.apiUrl+'/api/exp/'+id;
+		let detailUrl = 'api/exp/'+id;
 
 		return this.http.get<ExpDetail>(detailUrl)
 			.pipe(
