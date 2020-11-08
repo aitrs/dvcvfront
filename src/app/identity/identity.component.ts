@@ -55,6 +55,21 @@ import { Foldable } from '../foldable';
 				}
 			)),
 			transition('unloaded => loaded', animate('2s ease'))
+		]),
+		trigger('postLoadAnim', [
+			state('unloaded', style(
+				{
+					marginLeft: '0px',
+					opacity: 0
+				}
+			)),
+			state('loaded', style(
+				{
+					marginLeft: '650px',
+					opacity: 1
+				}
+			)),
+			transition('unloaded => loaded', animate('1s ease'))
 		])
 	]
 })
@@ -62,6 +77,7 @@ import { Foldable } from '../foldable';
 export class IdentityComponent implements OnInit {
 	identity: Identity;
 	state: string = 'none';
+	pststate: string = 'unloaded';
 	expandContactState: string = 'fold';
 	expandButtonText: string = '+';
 	expanded: boolean = false;
@@ -91,6 +107,10 @@ export class IdentityComponent implements OnInit {
 			this.state = 'max';
 			this.panim = 'loaded';
 		}, 10);
+		setTimeout(() => {
+			this.pststate = 'loaded';
+		}, 1000);
+		
 	}
 
 	expandButtonClick(): void {

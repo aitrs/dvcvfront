@@ -7,6 +7,27 @@
 	border-radius: 50%;
 }
 
+.identity_pdf {
+	display: block;
+	margin-top: -94px;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #143e52;
+	border-radius: 50%;
+	text-decoration: none;
+	color: inherit;
+}
+
+.pdf_text {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 80px;
+	height: 80px;
+}
+
 #identityHead {
 	margin-left: 0px;
 	margin-bottom: 20px;
